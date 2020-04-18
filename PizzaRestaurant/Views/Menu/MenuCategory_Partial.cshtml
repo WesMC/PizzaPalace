@@ -1,0 +1,17 @@
+﻿@model PizzaRestaurant.Models.MenuCategory
+
+<br />
+<h2 class="text-capitalize">@(Model.MenuCategoryId != new int() ? "Edit Menu Category": "Create Menu Category")</h2>
+<br />
+
+<form method="post" asp-action="UpsertMenuCategories">
+    @if (Model.MenuCategoryId != 0)
+    {
+        <input type="hidden" asp-for="MenuCategoryId" />
+        <input type="hidden" asp-for="MenuItems" />
+    }
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

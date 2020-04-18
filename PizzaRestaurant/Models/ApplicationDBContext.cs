@@ -23,14 +23,10 @@ namespace PizzaRestaurant.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Model Builder is used to assign foreign Keys
             modelBuilder.Entity<FoodOption>().ToTable("FoodOptions");
             modelBuilder.Entity<FoodOptionSet>().ToTable("FoodOptionSets");
             modelBuilder.Entity<MenuItem>().ToTable("MenuItems");
             modelBuilder.Entity<MenuCategory>().ToTable("MenuCategories");
-
-
-
         }
 
     }
