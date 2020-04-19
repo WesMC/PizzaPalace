@@ -1,2 +1,4 @@
 appsettings.*
 Properties/*.json
+obj/*
+bin/*
